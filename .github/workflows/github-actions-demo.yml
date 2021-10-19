@@ -4,7 +4,6 @@ jobs:
   my-job:
     runs-on: ubuntu-latest
     steps:
-      - run: npm install eslint --save-dev
-      - run: npm install eslint-config-airbnb-base --save-dev
-      - run: npm install eslint-plugin-import
+      - run: git clone https://github.com/Nikimad/frontend-project-lvl1.git
+      - run: make install
       - run: make lint
