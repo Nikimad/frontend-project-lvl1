@@ -5,5 +5,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: git clone https://github.com/Nikimad/frontend-project-lvl1.git
+      - run: cd frontend-project-lvl1 
       - run: make install
       - run: make lint
