@@ -24,7 +24,7 @@ const innerCalc = (a, b, index) => {
       result = 'Error';
   }
   return result;
-}
+};
 
 const getRandomExp = () => {
   const foperand = getRandomNum(0, 100);
