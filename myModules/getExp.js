@@ -1,6 +1,6 @@
-import innerCalc from '/CalcHandler.js'
-import getRandomNum from '/getNum.js'
-import getRandomOpWithIndex from '/getOp.js'
+import innerCalc from '../CalcHandler.js'
+import getRandomNum from '../getNum.js'
+import getRandomOpWithIndex from '../getOp.js'
 
 // create aaray with 'expression' and result of this expression
 export const getRandomExp = () => {
