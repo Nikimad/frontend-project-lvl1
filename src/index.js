@@ -21,7 +21,7 @@ const checker = (answer, correctAnswer) => {
   return false;
 };
 
-export const generalScenario = ({ rules, getQnA, validator }, maxAttempts) => {
+export default ({ rules, getQnA, validator }, maxAttempts) => {
   messages.welcome();
   const name = messages.getName();
   messages.greetings(name);
