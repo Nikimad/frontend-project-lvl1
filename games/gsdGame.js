@@ -6,7 +6,7 @@ const gsd = (x, y) => {
 	return gsd(y, x % y);
 };
 
-const gsdGame = {
+export default {
   rules: 'Find the greatest common divisor of given numbers.',
   validator: (answer) => !Number.isInteger(+answer),
   getQnA: () => {
