@@ -6,9 +6,9 @@ const counter = (name, game, maxAttempts) => {
     if (game()) {
       count += 1;
     } else {
-    return messages.luse(name);
-    };
-  };
+      return messages.luse(name);
+    }
+  }
   return messages.win(name);
 };
 
@@ -21,19 +21,19 @@ const checker = (answer, correctAnswer) => {
   return false;
 };
 
-const generalScenario = ({rules, getQnA, validator}, maxAttempts) => {
+export const generalScenario = ({ rules, getQnA, validator }, maxAttempts) => {
   messages.welcome();
   const name = messages.getName();
   messages.greetings(name);
   messages.rules(rules);
   const game = () => {
-  const {quest, correctAnswer} = getQnA();
-  messages.question(quest);
-  const answer = messages.answer();
-  if (validator(answer)) {
-    return false;
-  }
-  return checker(answer, correctAnswer);
+    const { quest, correctAnswer } = getQnA();
+    messages.question(quest);
+    const answer = messages.answer();
+    if (validator(answer)) {
+      return false;
+    }
+    return checker(answer, correctAnswer);
   };
   counter(name, game, maxAttempts);
 };
