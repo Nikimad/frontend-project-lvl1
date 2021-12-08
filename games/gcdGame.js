@@ -1,9 +1,9 @@
 import getRandomNum from '../src/getRandomNum.js';
 
 const gsd = (x, y) => {
-  if (y > x) return gsd(y, x);
+  if (y > x) return gcd(y, x);
   if (!y) return x;
-  return gsd(y, x % y);
+  return gcd(y, x % y);
 };
 
 export default {
@@ -12,7 +12,7 @@ export default {
   getQnA: () => {
     const [num1, num2] = [getRandomNum(0, 100), getRandomNum(0, 100)];
     const quest = `${num1} ${num2}`;
-    const correctAnswer = `${gsd(num1, num2)}`;
+    const correctAnswer = `${gcd(num1, num2)}`;
     return { quest, correctAnswer };
   },
 };
