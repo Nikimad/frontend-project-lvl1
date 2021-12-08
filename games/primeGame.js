@@ -23,8 +23,6 @@ export default {
   getQnA: () => {
   const quest = getRandomNum(1, 100);
   const correctAnswer = isPrime(quest) ? 'yes' : 'no';
-  return {quest: quest,
-   correctAnswer: correctAnswer,
-   };
+  return { quest, correctAnswer };
   },
 };
