@@ -18,20 +18,20 @@ const blurElemofProgression = (progression, index) => {
     }
   }
   return progressionWhithBluredElem.join(' ');
-}
+};
 
 const getElemofProgression = (startNum, index, step) => startNum + index * step;
 
-const progressionGame = {
+export default {
   rules: 'What number is missing in the progression?',
   validator: (answer) => !Number.isInteger(+answer),
   getQnA: () => {
     const startNum = getRandomNum(0, 20);
     const step = getRandomNum(1, 100);
     const progression = getProgression(startNum, step);
-    const indexOfElem = getRandomNum(0, progression.length - 1)
+    const indexOfElem = getRandomNum(0, progression.length - 1);
     const quest = blurElemofProgression(progression, indexOfElem);
-    const correctAnswer= `${getElemofProgression(startNum, indexOfElem, step)}`;
+    const correctAnswer = `${getElemofProgression(startNum, indexOfElem, step)}`;
     return { quest, correctAnswer };
   },
 };
