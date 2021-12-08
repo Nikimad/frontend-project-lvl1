@@ -19,7 +19,7 @@ export default {
     const progression = getProgression(startNum, step);
     const randIndex = getRandomNum(0, progression.length - 1);
     const [head, tail] = [progression.slice(0, randIndex), progression.slice(
-      randIndex + 1, progression.length
+      randIndex + 1, progression.length,
     )];
     const quest = `${head.join(' ')} .. ${tail.join(' ')}`;
     const correctAnswer = `${getElemofProgression(startNum, randIndex, step)}`;
