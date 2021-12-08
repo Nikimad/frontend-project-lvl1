@@ -15,7 +15,7 @@ const blurElemofProgression = (progression, index) => {
 
 const getElemofProgression = (startNum, index, step) => startNum + index * step;
 //GameModule
-const progressionGame = {
+export default {
   rules: 'What number is missing in the progression?',
   validator: (answer) => !Number.isInteger(+answer),
   getQnA: () => {
