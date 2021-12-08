@@ -13,6 +13,7 @@ const gsdGame = {
   const [num1, num2] = [getRandomNum(0, 100), getRandomNum(0, 100)];
   const quest = `${num1} ${num2}`;
   const correctAnswer = `${gsd(num1, num2)}`;
-  return { quest, correctAnswer };
+  return { quest: quest,
+    correctAnswer: correctAnswer, };
   },
 };
