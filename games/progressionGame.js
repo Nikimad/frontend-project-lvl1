@@ -25,8 +25,6 @@ export default {
     const indexOfElem = getRandomNum(0, progression.length)
     const quest = blurElemofProgression(progression, indexOfElem);
     const bluredElem = `${getElemofProgression(startNum, indexOfElem, step)}`;
-    return {quest: quest,
-     correctAnswer: bluredElem,
-    };
+    return { quest, bluredElem };
   },
 };
