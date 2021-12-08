@@ -5,7 +5,7 @@ export default {
   getName: () => readlineSync.question('May I have your name? '),
   greetings: (name) => console.log(`Hello, ${name}`),
   rules: (rules) => console.log(rules),
-  question: (quest) => console.log(`Qusetion: ${quest}`),
+  question: (quest) => console.log(`Question: ${quest}`),
   answer: () => readlineSync.question('Your answer: '),
   correct: () => console.log('Correct!'),
   wrong: (answer, correctAnswer) => console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`),
