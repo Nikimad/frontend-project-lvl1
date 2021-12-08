@@ -8,6 +8,8 @@ export default {
   getQnA: () => {
     const quest = getRandomNum(0, 100);
     const correctAnswer = isEven(quest) ? 'yes' : 'no';
-    return { quest, correctAnswer };
+    return { quest: quest, 
+     correctAnswer: correctAnswer, 
+    };
   },
 };
