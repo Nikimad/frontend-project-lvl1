@@ -1,9 +1,9 @@
 import getRandomNum from '../src/getRandomNum.js';
 
 const mathematics = [
-  (a, b, optional = 'sum') => optional !== 'exp' ? `${ a + b }` : `${ a } + ${ b }`,
-  (a, b, optional = 'dif') => optional !== 'exp' ? `${ a - b }` : `${ a } - ${ b }`,
-  (a, b, optional = 'mul') => optional !== 'exp' ? `${ a * b }` : `${ a } * ${ b }`,
+  (a, b, optional = 'sum') => (optional !== 'exp' ? `${a + b}` : `${a} + ${b}`),
+  (a, b, optional = 'dif') => (optional !== 'exp' ? `${a - b}` : `${a} - ${b}`),
+  (a, b, optional = 'mul') => (optional !== 'exp' ? `${a * b}` : `${a} * ${b}`),
 ];
 
 export default {
