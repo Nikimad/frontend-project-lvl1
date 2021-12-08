@@ -1,6 +1,6 @@
 import getRandomNum from '../src/getRandomNum.js';
 
-const gsd = (x, y) => {
+const gcd = (x, y) => {
   if (y > x) return gcd(y, x);
   if (!y) return x;
   return gcd(y, x % y);
