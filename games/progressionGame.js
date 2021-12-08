@@ -8,18 +8,6 @@ const getProgression = (startNum, step, size = 10) => {
   return progression;
 };
 
-const blurElemofProgression = (progression, index) => {
-  const progressionWhithBluredElem = [];
-  for (let i = 0; i < progression.length; i += 1) {
-    if (i === index) {
-      progressionWhithBluredElem.push('..');
-    } else {
-      progressionWhithBluredElem.push(progression[i]);
-    }
-  }
-  return progressionWhithBluredElem.join(' ');
-};
-
 const getElemofProgression = (startNum, index, step) => startNum + index * step;
 
 export default {
@@ -29,9 +17,11 @@ export default {
     const startNum = getRandomNum(0, 20);
     const step = getRandomNum(1, 100);
     const progression = getProgression(startNum, step);
-    const indexOfElem = getRandomNum(0, progression.length - 1);
-    const quest = blurElemofProgression(progression, indexOfElem);
-    const correctAnswer = `${getElemofProgression(startNum, indexOfElem, step)}`;
+    const randIndex = getRandomNum(0, progression.length - 1);
+    const [head, tail] = [progression.slice(0, randIndex), progression.slice(
+      randIndex + 1, progression.length)];
+    const quest = `${head.join(' ')} .. ${tail.join(' ')}`
+    const correctAnswer = `${getElemofProgression(startNum, randIndex, step)}`;
     return { quest, correctAnswer };
   },
 };
