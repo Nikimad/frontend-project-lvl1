@@ -18,6 +18,7 @@ const checker = (answer, correctAnswer) => {
     return true;
   }
   messages.wrong(answer, correctAnswer);
+  return false;
 };
 
 export default ({ rules, getQnA, validator }, maxAttempts) => {
