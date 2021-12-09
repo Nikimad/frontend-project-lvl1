@@ -1,6 +1,6 @@
 import getRandomNum from '../src/getRandomNum.js';
 
-const getProgression = (startNum, step, size = getRandomNum(5, 10)) => {
+const getProgression = (startNum, step, size = getRandomNum(6, 10)) => {
   const progression = [startNum];
   for (let i = 1; i < size; i += 1) {
     progression[i] = progression[i - 1] + step;
