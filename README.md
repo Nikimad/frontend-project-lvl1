@@ -8,6 +8,7 @@ make install
 ```
 ```
 ## Games:
+
 ````
 make
 1.brain-even
@@ -16,4 +17,5 @@ make
 4.brain-progression
 5.brain-prime
 ```
+
 Enjoy!
