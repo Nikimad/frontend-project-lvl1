@@ -9,7 +9,7 @@ make install
 
 ## Games:
 
-````
+```
 make
 1.brain-even
 2.brain-calc
