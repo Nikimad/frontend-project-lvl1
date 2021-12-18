@@ -6,7 +6,7 @@
 ```
 make install
 ```
-```
+
 ## Games:
 
 ````
