@@ -17,7 +17,3 @@ make
 4.brain-progression
 5.brain-prime
 ```
-
-## Example:
-
-[![Watch the video]](https://asciinema.org/a/ehK8RcIhILmEvj6yOPDb9evuC)
