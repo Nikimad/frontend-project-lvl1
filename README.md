@@ -16,9 +16,8 @@ make
 3.brain-gcd
 4.brain-progression
 5.brain-prime
-
 ```
 
 ## Example:
 
-[](https://asciinema.org/a/ehK8RcIhILmEvj6yOPDb9evuC)
+[1](https://asciinema.org/a/ehK8RcIhILmEvj6yOPDb9evuC)
