@@ -20,4 +20,4 @@ make
 
 ## Example:
 
-[1](https://asciinema.org/a/ehK8RcIhILmEvj6yOPDb9evuC)
+https://asciinema.org/a/ehK8RcIhILmEvj6yOPDb9evuC
