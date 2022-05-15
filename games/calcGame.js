@@ -8,7 +8,7 @@ const mathematics = [
 
 export default {
   rules: 'What is the result of the expression?',
-  validator: (answer) => !Number.isInteger(+answer),
+  validator: (answer) => !Number.isNaN(+answer),
   getQnA: () => {
     const [operand1, operand2] = [getRandomNum(0, 100), getRandomNum(0, 100)];
     const randExp = mathematics[getRandomNum(0, 2)];
