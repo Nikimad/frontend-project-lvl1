@@ -12,7 +12,7 @@ const getElemofProgression = (startNum, index, step) => startNum + index * step;
 
 export default {
   rules: 'What number is missing in the progression?',
-  validator: (answer) => !Number.isInteger(+answer),
+  validator: (answer) => !Number.isNaN(+answer),
   getQnA: () => {
     const startNum = getRandomNum(0, 20);
     const step = getRandomNum(1, 100);

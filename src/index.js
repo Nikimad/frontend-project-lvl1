@@ -1,39 +1,49 @@
 import messages from './cli.js';
 
-const counter = (name, game, maxAttempts) => {
+const tryCounter = (name, attempt, maxAttempts) => {
   let count = 0;
   while (count < maxAttempts) {
-    if (game()) {
+    if (attempt()) {
       count += 1;
     } else {
-      return messages.luse(name);
+      return messages.result.luse(name);
     }
   }
-  return messages.win(name);
+  return messages.result.win(name);
 };
 
-const checker = (answer, correctAnswer) => {
+const answerHandler = (answer, correctAnswer) => {
   if (correctAnswer === answer) {
-    messages.correct();
+    messages.result.correct();
     return true;
   }
-  messages.wrong(answer, correctAnswer);
+  messages.result.wrong(answer, correctAnswer);
   return false;
 };
 
-export default ({ rules, getQnA, validator }, maxAttempts) => {
-  messages.welcome();
-  const name = messages.getName();
-  messages.greetings(name);
-  messages.rules(rules);
-  const game = () => {
-    const { quest, correctAnswer } = getQnA();
-    messages.question(quest);
-    const answer = messages.answer();
-    if (validator(answer)) {
-      return false;
-    }
-    return checker(answer, correctAnswer);
-  };
-  counter(name, game, maxAttempts);
+const introduction = (rules) => {
+  messages.default.welcome();
+
+  const name = messages.ask.name();
+
+  messages.default.greetings(name);
+  messages.default.rules(rules);
+
+  return name;
+};
+
+const attempt = (getQnA, validator) => {
+  const { quest, correctAnswer } = getQnA();
+
+  messages.default.question(quest);
+
+  const answer = messages.ask.answer();
+
+  return validator(answer) ? answerHandler(answer, correctAnswer) : false;
+};
+
+export default (data, maxAttempts) => {
+  const name = introduction(data.rules);
+
+  tryCounter(name, () => attempt(data.getQnA, data.validator), maxAttempts);
 };
